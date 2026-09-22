@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cloud text-ink-900 font-body antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+}
+
+/* Dashed flight-path divider used on flight cards to connect origin -> destination */
+.flight-path {
+  position: relative;
+  height: 1px;
+  background-image: linear-gradient(to right, #94A3B8 50%, transparent 50%);
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+}
+
+.flight-path::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #94A3B8;
+}
+
+:focus-visible {
+  outline: 2px solid #2E3A87;
+  outline-offset: 2px;
+}
+
+@layer components {
+  .input {
+    @apply h-10 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-ink-900 outline-none transition-colors focus:border-indigo;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-indigo px-5 py-2.5 font-medium text-white transition-colors hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-5 py-2.5 font-medium text-ink-900 transition-colors hover:bg-slate-50;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white p-5 shadow-sm shadow-ink-900/5 ring-1 ring-black/5;
+  }
+}
