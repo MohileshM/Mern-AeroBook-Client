@@ -25,11 +25,17 @@ HTTP Client: Axios
 
 # Page Overview
 Home           : Hero banner and quick search widget for origin, destination, and dates.
+
 Search Results : Interactive search results list with multi-criteria filtering and sorting.
+
 Booking        : Passenger input form paired with a dynamic price breakdown sidebar.
+
 Confirmation   : E-ticket display showing confirmed PNR, itinerary details, and passenger info.
+
 My Bookings    : User history dashboard for managing trips and executing cancellations.
+
 Auth Pages     : Streamlined JWT login and user registration interfaces.
+
 Admin Dashboard : Executive suite featuring key metrics, pie charts, bar charts, and line graphs.
 
 # Demo Access
